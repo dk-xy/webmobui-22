@@ -1,0 +1,36 @@
+
+
+.containerArtistes{
+    padding-top: 50px;
+    padding-bottom:50px;
+    width: 80%;
+    display:flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-between;
+    text-align: center;
+    margin-right: auto;
+    margin-left: auto;
+    gap: 10px;
+
+
+}
+
+.artist{
+    position: relative;
+    text-align: center;
+    color: white;
+}
+
+.artist img{
+ width: 400px;
+}
+
+.artistName{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: black;
+    padding: 5px;
+}

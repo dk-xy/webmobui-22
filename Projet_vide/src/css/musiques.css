@@ -1,0 +1,15 @@
+.listeTitres{
+    width: 80%;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.listeTitres li{
+    padding-top: 20px;
+    padding-bottom: 20px;
+    border-top: solid 1px darkgrey
+}
+
+.listeTitres li:first-child{
+    border: none;
+}

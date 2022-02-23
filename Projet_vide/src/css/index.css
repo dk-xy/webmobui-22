@@ -1,6 +1,82 @@
 @import 'normalize.css';
 @import 'nav.css';
+@import 'player.css';
+@import 'variables.css';
+@import 'playlist.css';
+@import 'artistes.css';
+@import 'musiques.css';
 
+
+
+*{
+  font-family:roboto, light;
+}
+
+
+header{
+background-color: #202020;
+padding: 20px;
+color: white;
+display:flex;
+flex-direction: row;
+justify-content: space-between;
+position:relative;
+
+}
+
+html {
+  height: 100%;
+}
 body {
-  background-color: grey;
+  margin-left: auto;
+  margin-right: auto;
+  height: 100%;
+  margin:0;
+  display: flex;
+  flex-direction: column;;
+}
+
+.hidden{
+  display:none;
+}
+
+.theApp{
+  overflow-y: auto;
+  background-color: #bdbdbd;
+  margin-top: 0px !important;
+  margin-bottom: 0px;
+  flex-grow: 1;
+}
+
+
+button{
+  padding: 10px 15px;
+  border: #2d2d2d;
+  border-radius: 2px;
+  
+}
+
+
+
+/* partie bottom */
+.return{
+  text-align: center;
+  justify-content: center;
+}
+
+footer{
+  display:flex;
+  flex-direction: row;
+  justify-content: space-between;
+  background-color: #2d2d2d;
+  position:relative;
+}
+
+footer a{
+  text-align: center;
+  border-left:solid 1px white;
+  border-right:solid 1px white;
+  padding: 30px;
+  color: white;
+  width: 100%;
 }
