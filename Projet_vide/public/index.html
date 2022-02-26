@@ -7,8 +7,8 @@
 
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Icons" />
   <link rel="stylesheet" href="main.css" />
-  <script src="main.js"></script>
- 
+  <script defer src="main.js"></script>
+
 </head>
 
 <body>
@@ -19,26 +19,87 @@
     <!-- <input type="search" spellcheck="false" autocapitalize="false" autofocus> -->
   </header>
   <div class="theApp">
-    <div class="titrePage">Bienvenu sur </br>Spotlifyier</div>
-    <div class="titreSecondaire">Playlists</div>
-    <ul class="playlistContainer">
-      <li><button>Electro</button></li>
-      <li><button>House</button></li>
-      <li><button>Hardstyle</button></li>
-    </ul>
+    <!-- partie home -------------------------------------------->
+    <div class="section home active">
+      <div class="textHome">
+        <div class="titrePage">Bienvenu sur </br>Spotlifyier</div>
+        <div class="titreSecondaire">Playlists</div>
+      </div>
 
-    <div class="return">
-      <button>Retour vers les chansons</button>
+      <ul class="playlistContainer">
+        <li><button>Electro</button></li>
+        <li><button>House</button></li>
+        <li><button>Hardstyle</button></li>
+      </ul>
+
+      <div class="return">
+        <button>Retour vers les chansons</button>
+      </div>
     </div>
+    <!-- partie player ------------------------------------------->
+    <div class="section player hidden">
+      <img src="/img/album.jpg" alt="">
+      <audio src="/audio/Serotonin.mp3"></audio>
+      <audio controls>
+        <source src="/audio/Serotonin.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+      </audio>
+      <div class="playerIcon">
+        <span class="material-icons">skip_previous</span>
+        <span class="material-icons">play_arrow</span>
+        <span class="material-icons">skip_next</span>
+      </div>
+    </div>
+
+    <!-- partie artistes --------------------------------------->
+
+    <div class="section containerArtistes artist hidden">
+      <div class="artist">
+          <img src="img/garrix.jpg" alt="Martin Garrix">
+          <div class="artistName">Martin Garrix</div> 
+      </div>
+      <div class="artist">
+          <img src="img/datweakaz.jpg" alt="Da Tweakaz">
+          <div class="artistName">Da Tweakaz</div> 
+      </div>
+      <div class="artist">
+          <img src="img/hardwell.jpg" alt="Hardwell">
+          <div class="artistName">Hardwell</div> 
+      </div>
+      <div class="artist">
+          <img src="img/headhunterz.jpg" alt="HeadHunterz">
+          <div class="artistName">HeadHunterz</div> 
+      </div>
+      <div class="artist">
+          <img src="img/lushSimon.jpg" alt="Lush & Simon">
+          <div class="artistName">Lush & Simon</div> 
+      </div>
+      <div class="artist">
+          <img src="img/shm.jpg" alt="Swedish House Mafia">
+          <div class="artistName">Swedish House Mafia</div> 
+      </div>
+
+  </div>
+
+  <!-- partie morceaux -->
+  <div class="section musique hidden">
+    <div class="titreSecondaire">Playlists</div>
+    <ul class = "listeTitres">
+        <li>The best of Progressive House <div class="material-icons">arrow_forward_ios</div></li>
+        <li>Hardwell On Air <div class="material-icons">arrow_forward_ios</div></li>
+        <li>Defqon1 Best Of <div class="material-icons">arrow_forward_ios</div></li>
+        <li>Deep House Ectro Selection <div class="material-icons">arrow_forward_ios</div></li>
+    </ul>
+  </div>
+
   </div>
 
   <!--partie footer-->
-  <footer>
-    <button  class="leFooter">yooo</button>
-    <a class="material-icons" href="index.html" id="home">home</a>
-    <a class="material-icons" id="player" href="player.html">queue_music</a>
-    <a class="material-icons" id="artist" href="artistes.html"artistes.html>slow_motion_video</a>
-    <a class="material-icons" id ="musique" href="musiques.html">playlist_play</a>
+  <footer id="navigationMenu">
+    <button class="menu material-icons" id="home">home</a>
+    <button class="menu material-icons" id="player" href="player.html">queue_music</a>
+    <button class="menu material-icons" id="artist" href="artistes.html" artistes.html>slow_motion_video</a>
+    <button class="menu material-icons" id="musique" href="musiques.html">playlist_play</a>
   </footer>
 </body>
 

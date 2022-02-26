@@ -3,7 +3,7 @@
 .containerArtistes{
     padding-top: 50px;
     padding-bottom:50px;
-    width: 80%;
+    width: 50%;
     display:flex;
     flex-wrap: wrap;
     flex-direction: row;
@@ -27,10 +27,13 @@
 }
 
 .artistName{
+    font-size: 24px;
+    font-weight: 700;
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    background-color: black;
-    padding: 5px;
+    background-color: #2d2d2d;
+    padding: 15px;
+    border-radius: 10px;
 }

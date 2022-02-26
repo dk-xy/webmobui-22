@@ -1,5 +1,5 @@
 import './css/index.css';
-// import domManipulator from "./js/domManipulator.js";
+import domManipulator from "./js/domManipulator.js";
 
 function domOn(selector, event, callback) {
     domForEach(selector, ele => ele.addEventListener(event, callback));
@@ -11,34 +11,39 @@ function domOn(selector, event, callback) {
   }
 
 
-console.log("hello");
-const monBouton = document.querySelector('.leFooter');
+//  Selection du menu dynamique 
 
-monBouton.addEventListener('click', evt => {
-  console.log(evt);
-});
-
-domOn('.leFooter', 'click', evt=>{
+domOn('.menu', 'click', evt=>{
     console.log("helloToYou")
     console.log(evt);
     console.log(evt.target)
+    let selection = evt.target.id
+    console.log(selection);
+    domForEach('.section', evt=>{
+      //check ce qui est actif et le cache
+      if (evt.classList.contains('active')) {
+        window.setTimeout( function() {
+          evt.classList.remove('active');  
+      }, 100);
+      
+      evt.classList.add('hidden');   
+
+      }
+      //affiche la séléction
+      if (evt.classList.contains(selection)) {
+        window.setTimeout( function() {
+          evt.classList.add('active');
+          evt.classList.remove('hidden');
+      }, 100);
+      
+
+        
+      }
+    })
+    
 })
 
-domOn('body','click', evt=>{
-    console.log("hello Body")
-    console.log(evt);
-    console.log(evt.target)
-})
 
-domOn('#leBut', 'click', evt=>{
-    console.log("touch butt")
-})
-
-domOn('button', 'click', evt=>{
-  console.log("touch butt")
-})
-
-console.log(2+1)
 
 
 

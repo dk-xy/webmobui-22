@@ -1,5 +1,5 @@
 .listeTitres{
-    width: 80%;
+    width: 60%;
     margin-right: auto;
     margin-left: auto;
 }
@@ -12,4 +12,20 @@
 
 .listeTitres li:first-child{
     border: none;
+}
+
+li .material-icons{
+    position: absolute;
+    padding-left: 50px;
+
+}
+
+.listeTitres li:hover{
+    background-color: #2d2d2d;
+    transition: background-color 1s ease;
+    color: white;
+}
+
+li{
+    padding: 20px;
 }

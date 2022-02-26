@@ -12,7 +12,27 @@
   font-family:roboto, light;
 }
 
+.active{
+  visibility: visible;
+  opacity: 1;
+  transition:             opacity 2s, visibility 2s;
+      -moz-transition:    opacity 2s, visibility 2s;
+      -ms-transition:     opacity 2s, visibility 2s;
+      -o-transition:      opacity 2s, visibility 2s;
+      -webkit-transition: opacity 2s, visibility 2s;
+      
+}
 
+.hidden{
+  transition:             opacity 2s, visibility 2s;
+  -moz-transition:    opacity 2s, visibility 2s;
+  -ms-transition:     opacity 2s, visibility 2s;
+  -o-transition:      opacity 2s, visibility 2s;
+  -webkit-transition: opacity 2s, visibility 2s;
+  opacity: 0;
+  visibility: hidden;
+  /* transition-duration: 500ms; */
+}
 header{
 background-color: #202020;
 padding: 20px;
@@ -46,6 +66,8 @@ body {
   margin-top: 0px !important;
   margin-bottom: 0px;
   flex-grow: 1;
+  width: 100%;
+  height: auto;
 }
 
 
@@ -56,7 +78,14 @@ button{
   
 }
 
-
+.textHome{
+  /* display:flex; */
+  justify-content: left;
+  /* flex-direction: column; */
+  width: 25%;
+  margin-right: auto;
+  margin-left: auto;
+}
 
 /* partie bottom */
 .return{
@@ -68,15 +97,21 @@ footer{
   display:flex;
   flex-direction: row;
   justify-content: space-between;
-  background-color: #2d2d2d;
   position:relative;
 }
 
-footer a{
+footer button{
   text-align: center;
   border-left:solid 1px white;
   border-right:solid 1px white;
+  background-color: #2d2d2d;
   padding: 30px;
   color: white;
   width: 100%;
+}
+
+#navigationMenu button:hover{
+  background-color: #000000;
+  color: rgb(212, 47, 163);
+  transition: background-color 1s ease, color 1s ease;
 }
