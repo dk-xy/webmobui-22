@@ -20,7 +20,7 @@
   </header>
   <div class="theApp">
     <!-- partie home -------------------------------------------->
-    <div class="section home active">
+    <div class="section home active" id="home">
       <div class="textHome">
         <div class="titrePage">Bienvenu sur </br>Spotlifyier</div>
         <div class="titreSecondaire">Playlists</div>
@@ -37,7 +37,7 @@
       </div>
     </div>
     <!-- partie player ------------------------------------------->
-    <div class="section player hidden">
+    <div class="section player hidden" id="player">
       <img src="/img/album.jpg" alt="">
       <audio src="/audio/Serotonin.mp3"></audio>
       <audio controls>
@@ -53,7 +53,7 @@
 
     <!-- partie artistes --------------------------------------->
 
-    <div class="section containerArtistes artist hidden">
+    <div class="section containerArtistes artist hidden" id="artiste">
       <div class="artist">
           <img src="img/garrix.jpg" alt="Martin Garrix">
           <div class="artistName">Martin Garrix</div> 
@@ -82,7 +82,7 @@
   </div>
 
   <!-- partie morceaux -->
-  <div class="section musique hidden">
+  <div class="section music hidden" id="music">
     <div class="titreSecondaire">Playlists</div>
     <ul class = "listeTitres">
         <li>The best of Progressive House <div class="material-icons">arrow_forward_ios</div></li>
@@ -96,10 +96,10 @@
 
   <!--partie footer-->
   <footer id="navigationMenu">
-    <button class="menu material-icons" id="home">home</a>
-    <button class="menu material-icons" id="player" href="player.html">queue_music</a>
-    <button class="menu material-icons" id="artist" href="artistes.html" artistes.html>slow_motion_video</a>
-    <button class="menu material-icons" id="musique" href="musiques.html">playlist_play</a>
+        <a href="#home" class="menu material-icons active" id="boutonHome" >home</a>
+        <a href="#player" class="menu material-icons" id="boutonPlayer" >queue_music</a>
+        <a href="#artist" class="menu material-icons" id="boutonArtist" >slow_motion_video</a>
+        <a href="#music" class="menu material-icons" id="boutonMusique" >playlist_play</a>
   </footer>
 </body>
 

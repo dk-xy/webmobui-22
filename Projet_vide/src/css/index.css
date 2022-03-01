@@ -110,7 +110,23 @@ footer button{
   width: 100%;
 }
 
+footer a{
+  text-align: center;
+  border-left:solid 1px white;
+  border-right:solid 1px white;
+  background-color: #2d2d2d;
+  padding: 30px;
+  color: white;
+  width: 100%;
+}
+
 #navigationMenu button:hover{
+  background-color: #000000;
+  color: rgb(212, 47, 163);
+  transition: background-color 1s ease, color 1s ease;
+}
+
+#navigationMenu a:hover{
   background-color: #000000;
   color: rgb(212, 47, 163);
   transition: background-color 1s ease, color 1s ease;
