@@ -12,11 +12,19 @@ function domForEach(selector, callback) {
 
 
 
+
+
 window.addEventListener('hashchange', evt => {
   let hash = "#" + window.location.href.split('#')[1];
-  console.log(hash)
+  console.log(hash) 
   render(hash);
 
+})
+
+window.addEventListener('load', evt=>{
+  let hash = "#" + window.location.href.split('#')[1];
+  console.log(hash) 
+  render(hash); 
 })
 
 function render(hash) {
