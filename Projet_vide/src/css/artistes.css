@@ -24,15 +24,16 @@
 
 .artist img{
  width: 400px;
+ z-index:-1;
 }
 
 .artistName{
     font-size: 24px;
     font-weight: 700;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    position: relative;
+    top: -25%;
+    
+    /*transform: translate(-50%, -50%); */
     background-color: #2d2d2d;
     padding: 15px;
     border-radius: 10px;

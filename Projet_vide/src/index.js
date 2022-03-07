@@ -29,6 +29,7 @@ window.addEventListener('load', evt=>{
 
 function render(hash) {
   domForEach('.section', elm=>{
+    console.log(hash)
     if(elm.classList.contains(hash.substring(1))){
       elm.classList.remove('hidden')
       elm.classList.add("active")
@@ -37,6 +38,38 @@ function render(hash) {
       elm.classList.add('hidden')
     }
   })
+  if (hash == "#artist") {
+    getArtists()
+  }
+}
+
+
+
+async function getArtists(){
+  let link ="https://webmob-ui-22-spotlified.herokuapp.com/api/artists";
+  const TMPL_ARTI = document.querySelector('.artistInd');
+  console.log(TMPL_ARTI)
+
+  fetch(link)
+  .then((resp) => resp.json())
+  .then((artistes) =>{
+    console.log(artistes)
+
+    //console.log(artistes)
+    artistes.forEach(elm => {
+      let tmpl = TMPL_ARTI.cloneNode(true)
+      tmpl.classList.remove('hidden');
+      console.log(elm.name)
+      tmpl.querySelector('img').setAttribute('src', elm.image_url)
+      tmpl.querySelector('.artistName').textContent = elm.name;
+      // tmpl.querySelector('a').setAttribute = ('href', "#artists-"+elm.id)
+      document.querySelector('#artiste').appendChild(tmpl)
+
+    });
+    
+  })
+
+
 }
 
 

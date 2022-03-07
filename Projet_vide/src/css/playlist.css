@@ -39,3 +39,19 @@
   margin:20px;
   padding: 20 0 20 0;
   }
+
+  .playlistContainer button, .return button{
+    color:white;
+    background-color: transparent;
+    border-bottom: solid 2px;
+    margin-bottom:10px;
+    transition: color ease 0.3s;
+    
+  }
+
+  .playlistContainer button:hover, .return button:hover{
+    background-color: transparent;
+    border-bottom: solid 2px;
+    color: rgb(212, 47, 163);
+    transition: color ease 0.3s;
+  }

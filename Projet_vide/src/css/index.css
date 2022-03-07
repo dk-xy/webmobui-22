@@ -62,7 +62,7 @@ body {
 
 .theApp{
   overflow-y: auto;
-  background-color: #bdbdbd;
+  background-color: #686868;
   margin-top: 0px !important;
   margin-bottom: 0px;
   flex-grow: 1;
@@ -80,7 +80,7 @@ button{
 
 .textHome{
   /* display:flex; */
-  justify-content: left;
+  align-content: left;
   /* flex-direction: column; */
   width: 25%;
   margin-right: auto;
