@@ -29,3 +29,12 @@ li .material-icons{
 li{
     padding: 20px;
 }
+
+span {
+    display: inline; /* evite l'overlaping des icones*/
+    color: blue;
+}
+
+.song-icons{
+  position: relative !important;
+}
