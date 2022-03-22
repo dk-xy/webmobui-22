@@ -1,5 +1,10 @@
 const player = document.querySelector("#player");
+const playerImg = player.querySelector("img")
+const audio = player.querySelector("audio")
+//mise en place son + img dans player
 
+
+const playerButtons = document.querySelector(".playerIcon")
 const audioPlayer = document.querySelector("audio");
 const playButton = document.querySelector(".play")
 
