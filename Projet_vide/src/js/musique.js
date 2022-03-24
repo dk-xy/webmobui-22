@@ -33,14 +33,9 @@ export default async function getSongs(id) {
           list.innerHTML+=favouriteEmpty;
           list.setAttribute('songID', song.id)
           list.querySelector("span").setAttribute('src', song.audio_url)
-          //création tableau de chanson a retourner
+          //ajout de la chanson selectionnée au localStorage
           console.log(song)
           localStorage.setItem('song-'+song.id, song.audio_url);
-          // artistPlaylist.push({
-          //   artist: song.artist,
-          //   title: song.title,
-          //   link: song.audio_url
-          // })
         });
         
         //ecoute des clics
