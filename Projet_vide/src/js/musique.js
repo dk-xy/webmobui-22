@@ -2,7 +2,7 @@ import { domOn, domForEach } from "./domManipulator.js";
 const player = document.querySelector("#player");
 const playerImg = player.querySelector("img")
 const audio = player.querySelector("audio")
-
+const playButton = document.querySelector(".play")
 //mise en place son + img dans player
 
 
@@ -49,7 +49,8 @@ export default async function getSongs(id) {
           const audioPlayer = document.querySelector("thePlayer");
           audio.src = leLien
           playerImg.src = songs[0].artist.image_url;
-  
+          audio.play()
+          playButton.textContent = "pause";
         })    
       }
  
