@@ -3,6 +3,7 @@ import { domOn, domForEach } from "./js/domManipulator.js";
 import getArtists from "./js/artist.js";
 import getSongs from"./js/musique.js";
 import playerState, {toggleState}from "./js/player.js";
+let currentPlaylist;
 
 
 
@@ -25,9 +26,6 @@ window.addEventListener('load', evt => {
 
 function render(hash) {
 
-
-
-
   domForEach('.section', elm => {
     //console.log(hash)
     //console.log(hash.substring(1))
@@ -38,7 +36,6 @@ function render(hash) {
       elm.classList.remove('active')
       elm.classList.add('hidden')
     }
-
   })
 
   if (hash == "#artist") {
@@ -48,10 +45,16 @@ function render(hash) {
     //console.log(hash)
     let tabLink = hash.split('-')
     let artistID = tabLink[1]
-    getSongs(artistID);
+    currentPlaylist = getSongs(artistID);
+    console.log(currentPlaylist);
     document.querySelector('.artistSongs').classList.remove('hidden')
   }
 
+
+  if(!hash.split('-').length > 1 || hash != "#player"){
+    console.log('hello')
+
+  }
 }
 
 
