@@ -27,6 +27,7 @@ export default async function getArtists() {
 
  export async function makeArtists(art) {
     const TMPL_ARTI = document.querySelector('.artistInd');
+    const noeud = document.querySelector('.artistSongs .listeTitres')
     let tmpl = TMPL_ARTI.cloneNode(true)
     tmpl.id = "#artistInd-" + art.id
     tmpl.setAttribute('artistno', art.id)
@@ -35,5 +36,6 @@ export default async function getArtists() {
     tmpl.querySelector('img').setAttribute('src', art.image_url)
     tmpl.querySelector('.artistName').textContent = art.name;
     document.querySelector('#artiste').appendChild(tmpl)
+    noeud.classList.add('active')
   
   }
