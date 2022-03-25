@@ -50,7 +50,7 @@ function render(hash) {
     let tabLink = hash.split('-')
     let artistID = tabLink[1]
     document.querySelectorAll('.listeTitres').forEach(elm => {
-      elm.textContent =""
+      //elm.textContent =""
     });;
 
     currentPlaylist = getSongs(artistID);
